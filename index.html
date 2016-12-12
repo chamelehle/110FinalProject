@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <meta charset="utf-8" />
+    <!-- BOOTSTRAP (style only)-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+-->
+    <title>Home</title>
+    <script type="text/javascript" src="groceries.js"></script>
+    <script type="text/javascript">
+
+    </script>
+
+    <link rel="stylesheet" href="photo.css" />
+
+  </head>
+  <body lang="en-US" onload="index()" >
+
+  <H1>Personal Website</H1><br>
+  <div id="wrap">
+<div id="contentBox">
+  <div class="column">
+  <button id='user' onclick='User()'> User </button><br><br>
+
+  <button id='contacts' onclick='Contacts()'> Contacts </button><br><br>
+
+  <button  onclick='Bio22()'> Bio </button><br><br>
+</div>
+<div class="column">
+  <p> Choose your own personal cover photo</p>
+  <input type="file" id="img" onchange="previewFile();"><br>
+
+  <img src="" height="600"  >
+
+</div>
+</div>
+</div>
+<br><br><br><br><br><br>
+
+
+  <!--<input type="file" name="IMG File" id="file"  />
+
+
+  <form action="demo_form.asp">
+Img Source: <input type="text" name="Photo" value="Photo"><br>
+<input type="submit" value="Submit">
+</form>
+  <img src="" id="Image"  width=32 height=32/>
+
+
+  <input type="file" id="files" name="files[]" multiple />
+  <output id="list"></output>
+
+<form>
+<input type="text" id='imagename' value="url here">
+<input type="submit" id='img' value="submit">
+</form>
+
+<img src="" id='img'>
+
+<input type="url" id="myURL" value="http://www.google.com">
+<button onclick="myFunction()" value="URL"></button>
+<img src='myFunction()' width=300 height=300/>
+-->
+<div id="footer">
+<footer>Copyright © CHorp</footer>
+</div>
+
+
+
+<img class="profile-pic" src="" />
+<div class="upload-button">Upload Image</div>
+<input class="file-upload" type="file" accept="image/*"/>
+
+  </body>
+</html>

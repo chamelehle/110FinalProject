@@ -6,6 +6,7 @@ h1
 p
 {
   color: blue;
+  font-family: "Times New Roman", Times, serif;
 }
 
 button
@@ -36,32 +37,3 @@ html, body {height: 100%;}
 	margin-top: -150px; /* negative value of footer height */
 	height: 150px;
 	clear:both;}
-
-/*Opera Fix*/
-body:before {
-	content:"";
-	height:100%;
-	float:left;
-	width:0;
-	margin-top:-32767px;/
-}
-
-
-
-.upload-button {
-    padding: 4px;
-    border: 1px solid black;
-    border-radius: 5px;
-    display: block;
-    float: left;
-}
-
-.profile-pic {
-    max-width: 200px;
-    max-height: 200px;
-    display: block;
-}
-
-.file-upload {
-    display: none;
-}

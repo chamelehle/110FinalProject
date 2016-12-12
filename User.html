@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="photo.css" />
   </head>
-  <body lang="en-US" onload="firston();laston();addon();favon()" >
+  <body lang="en-US" onload="firston();laston();addon();favon();texton();tcc()" id='tcval' >
 
   <H1>User Information</H1><br>
   <button id="back" onclick="home()"> Home </button><br>
@@ -35,7 +35,11 @@
 
   <H3>Favorite Color</H3>
   <input type="text" id="fc" placeholder="Favorite Color">
-  <button id = "fc" onclick="color()"> Add </button><br><br>
+  <button id = "fc" onclick="color()"> Add </button><br>
+
+  <H3>Favorite Text Color</H3>
+  <input type="text" id="tc" placeholder="Favorite text Color">
+  <button id = "tc" onclick="TextColor()"> Add </button><br><br>
 </div>
 <div class="column">
   <H3>First Name</H3>
@@ -48,7 +52,10 @@
   <output id='aval'></output><br>
 
   <H3>Favorite Color</H3>
-  <output id='fcval'></output>
+  <output id='fcval'></output><br>
+
+  <H3>Favorite Text Color</H3>
+  <output id='tcv'></output>
 </div>
 </div>
 </div>

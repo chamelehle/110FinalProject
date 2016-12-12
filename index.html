@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="photo.css" />
 
   </head>
-  <body lang="en-US" onload="index()" >
+  <body lang="en-US" onload="index();texton()" id='tcval' >
 
   <H1>Personal Website</H1><br>
   <div id="wrap">
@@ -26,6 +26,9 @@
   <button id='contacts' onclick='Contacts()'> Contacts </button><br><br>
 
   <button  onclick='Bio22()'> Bio </button><br><br>
+  <button id='myBtn'>Who am I?!?</button><br><br><br>
+  <output id='fval'> </output>
+  <output id='lval'> </output>
 </div>
 <div class="column">
   <p> Choose your own personal cover photo</p>
@@ -36,42 +39,13 @@
 </div>
 </div>
 </div>
-<br><br><br><br><br><br>
 
 
-  <!--<input type="file" name="IMG File" id="file"  />
 
-
-  <form action="demo_form.asp">
-Img Source: <input type="text" name="Photo" value="Photo"><br>
-<input type="submit" value="Submit">
-</form>
-  <img src="" id="Image"  width=32 height=32/>
-
-
-  <input type="file" id="files" name="files[]" multiple />
-  <output id="list"></output>
-
-<form>
-<input type="text" id='imagename' value="url here">
-<input type="submit" id='img' value="submit">
-</form>
-
-<img src="" id='img'>
-
-<input type="url" id="myURL" value="http://www.google.com">
-<button onclick="myFunction()" value="URL"></button>
-<img src='myFunction()' width=300 height=300/>
--->
 <div id="footer">
 <footer>Copyright © CHorp</footer>
 </div>
 
-
-
-<img class="profile-pic" src="" />
-<div class="upload-button">Upload Image</div>
-<input class="file-upload" type="file" accept="image/*"/>
 
   </body>
 </html>

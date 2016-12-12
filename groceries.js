@@ -1,5 +1,20 @@
 
 var myArray=[];
+
+
+function displayDate(){
+  var lcook=getCookie("last");
+  document.getElementById('lval').value = lcook;
+  var fcook=getCookie("first");
+  document.getElementById('fval').value = fcook;
+  //var acook=getCookie("address");
+  //document.getElementById('aval').value = acook;
+  var dcook = Date();
+  window.alert("Your name is " + fcook + " " + lcook + ". The date today is "
+  + dcook);
+
+}
+
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
@@ -122,6 +137,28 @@ function favon()
 var fccook=getCookie("color");
   document.body.style.backgroundColor = fccook;
 }
+function TextColor()
+{
+  var tc = document.getElementById("tc").value;
+  setCookie("textcolor", tc, 20*365);
+  var tcook=getCookie("textcolor");
+  document.getElementById("tcv").value = tcook;
+  document.getElementById("tcval").style.color = tcook;
+
+
+}
+function texton()
+{
+  var tccook=getCookie("textcolor");
+  //document.getElementById("tcv").value = tccook;
+  document.getElementById("tcval").style.color = tccook;
+
+}
+function tcc()
+{
+    var tccook=getCookie("textcolor");
+    document.getElementById("tcv").value = tccook;
+}
 
 //courtesy of stackoverflow, from: http://stackoverflow.com/questions/5802580/html-input-type-file-get-the-image-before-submitting-the-form
 function previewFile() {
@@ -163,8 +200,9 @@ function index()
 {
   var fccook=getCookie("color");
   document.body.style.backgroundColor = fccook;
+  document.getElementById("myBtn").addEventListener("click", displayDate);
 }
-
+/*
 
 $(document).ready(function() {
 
@@ -192,7 +230,7 @@ $(document).ready(function() {
 });
 
 
-/*
+
 function readURL(input)
 {
     document.getElementById("BImg").style.display = "block";

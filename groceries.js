@@ -1,4 +1,8 @@
-
+/*
+Cory Hamelehle
+110
+Final Project
+*/
 var myArray=[];
 
 
@@ -13,6 +17,12 @@ function displayDate(){
   window.alert("Your name is " + fcook + " " + lcook + ". The date today is "
   + dcook);
 
+}
+function index()
+{
+  var fccook=getCookie("color");
+  document.body.style.backgroundColor = fccook;
+  document.getElementById("myBtn").addEventListener("click", displayDate);
 }
 
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
@@ -196,130 +206,3 @@ function home()
 {
   window.open("index.html",'_self');
 }
-function index()
-{
-  var fccook=getCookie("color");
-  document.body.style.backgroundColor = fccook;
-  document.getElementById("myBtn").addEventListener("click", displayDate);
-}
-/*
-
-$(document).ready(function() {
-
-
-    var readURL = function(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('.profile-pic').attr('src', e.target.result);
-            }
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-
-    $(".file-upload").on('change', function(){
-        readURL(this);
-    });
-
-    $(".upload-button").on('click', function() {
-       $(".file-upload").click();
-    });
-});
-
-
-
-function readURL(input)
-{
-    document.getElementById("BImg").style.display = "block";
-
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-            document.getElementById('BImg').src =  e.target.result;
-        }
-
-        reader.readAsDataURL(input.files[0]);
-    }
-}
-*/
-
-//courtesy of stackoverflow, from: http://stackoverflow.com/questions/5802580/html-input-type-file-get-the-image-before-submitting-the-form
-/*
-function setImage()
-{
-  var img = document.getElementById('file');
-  var ShowImage = document.getElementById('Photo');
-  var Data = getBase64Image(ShowImage);
-  localStorage.setItem("imgD", Data);
-  var image = new Image();
-  image.src = Data;
-  document.body.appendChild(image);
-}
-function getImage()
-{
-  var Image =  localStorage.getItem('imgD');
-  ShowImage = document.getElementById('Image');
-  ShowImage.src = "data:image/png;base64," + Image;
-  document.getElementById('img2').setAttribute('src', 'data:image/png;base64,' + Image)
-}
-function getBase64Image(img) {
-    var canvas = document.createElement("canvas");
-    canvas.width = img.width;
-    canvas.height = img.height;
-
-    var ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0);
-
-    var dataURL = canvas.toDataURL("image/png");
-
-    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-}
-//courtesy of stackoverflow, from http://stackoverflow.com/questions/19183180/how-to-save-an-image-to-localstorage-and-display-it-on-the-next-page
-
-
-function handleFileSelect(evt) {
-  var files = evt.target.files; // FileList object
-
-  // Loop through the FileList and render image files as thumbnails.
-  for (var i = 0, f; f = files[i]; i++) {
-
-    // Only process image files.
-    if (!f.type.match('image.*')) {
-      continue;
-    }
-
-    var reader = new FileReader();
-
-    // Closure to capture the file information.
-    reader.onload = (function(theFile) {
-      return function(e) {
-        // Render thumbnail.
-        var span = document.createElement('span');
-        span.innerHTML = ['<img class="thumb" src="', e.target.result,
-                          '" title="', escape(theFile.name), '"/>'].join('');
-
-        document.getElementById('list').insertBefore(span, null);
-        localStorage.setItem('img', e.target.result);
-      };
-    })(f);
-
-    // Read in the image file as a data URL.
-    reader.readAsDataURL(f);
-  }
-
-}
-
-document.getElementById('files').addEventListener('change', handleFileSelect, false);
-
-if(localStorage.img)
-{
-       var span = document.createElement('span');
-        span.innerHTML += ['<img class="thumb" src="', localStorage.img,
-                          '" title="test"/>'].join('');
-        document.getElementById('list').insertBefore(span, null);
-}
-*/
